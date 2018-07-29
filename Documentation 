@@ -1,0 +1,32 @@
+// Dependencies used
+
+express mongoose passportpassport-jwt jsonwebtoken body-parser bcryptjs validator gravatar
+
+gravatar : Used for avatars 
+
+validate : used for validations and such. Kept in the validators file. Predefined is emoty only checks for strings. hence is-empty.js was made
+If a field is left empty it will be sent as null or undefined. Validator only works with strings. Hence the is empty method , checks and then converts it into String for the checking part.
+
+//
+Use populate only while getting detail
+
+CNTRL + SHIFT + R , shortcut for refactoring in visual 
+
+npm i -g create-react-app
+
+npm i -g npm // upgrade to latest version
+
+
+create-react-app client // Creates client which will be used it is completely seperate
+
+//To run both server and client concurrently 
+
+sudo npm i concurrently // install it
+
+rfc tab for making a function component
+
+class = className
+
+to install router react-router-dom
+
+put exact otherwise it will show contents from multiple pages
