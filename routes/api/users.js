@@ -23,11 +23,11 @@ router.get("/test", (req, res) => {});
 // @desc   router to register user
 // @acess  Public
 router.post("/register", (req, res) => {
-  console.log("Name in backend is this "+ req.body.name);
+  console.log("Name in backend is this " + req.body.name);
   const { errors, isValid } = validateRegisterInput(req.body);
   //  Check validation
   if (!isValid) {
-    return res.status(400).json( errors);
+    return res.status(400).json(errors);
   }
 
   User.findOne({
@@ -35,7 +35,7 @@ router.post("/register", (req, res) => {
   }).then(user => {
     if (user) {
       errors.email = "Email already exists";
-      return res.status(400).json({ errors });
+      return res.status(400).json(errors);
     } else {
       const avatar = gravatar.url(req.body.email, {
         s: "200", //Size
@@ -79,14 +79,14 @@ router.post("/login", (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
   //  Check validation
   if (!isValid) {
-    return res.status(400).json({ errors });
+    return res.status(400).json(errors);
   }
   User.findOne({ email }).then(user => {
     if (!user) {
       errors.email = "User not found";
-      return res.status(404).json({ errors });
+      return res.status(404).json(errors);
     }
-
+console.log(password)
     //   Check Password
     // Returns true or false value
     bcrypt.compare(password, user.password).then(isMatch => {
@@ -116,7 +116,7 @@ router.post("/login", (req, res) => {
         );
       } else {
         errors.password = `Password incorrect`;
-        return res.status(400).json({ errors });
+        return res.status(400).json(errors);
       }
     });
   });

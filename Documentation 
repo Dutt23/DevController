@@ -30,3 +30,21 @@ class = className
 to install router react-router-dom
 
 put exact otherwise it will show contents from multiple pages
+
+//For redux
+
+sudo npm i redux react-redux redux-thunk --save
+
+redux-thunk is a middle used for ajax requests , async waits for thr request to come in first
+
+createStore function
+arguments 
+reducer (Function): A reducing function that returns the next state tree, given the current state tree and an action to handle.
+
+[preloadedState] (any): The initial state. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. If you produced reducer with combineReducers, this must be a plain object with the same shape as the keys passed to it. Otherwise, you are free to pass anything that your reducer can understand.
+
+[enhancer] (Function): The store enhancer. You may optionally specify it to enhance the store with third-party capabilities such as middleware, time travel, persistence, etc. The only store enhancer that ships with Redux is applyMiddleware().
+
+Token has all the information required. We can get everything from there. jwt decode module is used to decide the information
+
+If you props always map state to props. Always bring in prop-types to map
