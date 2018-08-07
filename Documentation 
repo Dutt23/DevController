@@ -51,3 +51,9 @@ If you props always map state to props. Always bring in prop-types to map
 
 Reducers look for the type:GET_ERRORS.
 THat type of action triggers the reducer
+
+//
+
+After deployment setups required
+1st in injex.js
+"heroku-postbuild":"NPM_CONFIG_PRODUCTION=FALSE"
