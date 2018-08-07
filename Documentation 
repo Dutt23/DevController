@@ -48,3 +48,6 @@ reducer (Function): A reducing function that returns the next state tree, given 
 Token has all the information required. We can get everything from there. jwt decode module is used to decide the information
 
 If you props always map state to props. Always bring in prop-types to map
+
+Reducers look for the type:GET_ERRORS.
+THat type of action triggers the reducer

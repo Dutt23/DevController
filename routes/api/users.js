@@ -86,7 +86,7 @@ router.post("/login", (req, res) => {
       errors.email = "User not found";
       return res.status(404).json(errors);
     }
-console.log(password)
+// console.log(password)
     //   Check Password
     // Returns true or false value
     bcrypt.compare(password, user.password).then(isMatch => {
@@ -104,7 +104,7 @@ console.log(password)
         jwt.sign(
           payload,
           keys.secretOrKey,
-          { expiresIn: 3600 },
+          {expiresIn: 3600},
           (err, token) => {
             res.json({
               success: true,

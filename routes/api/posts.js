@@ -123,7 +123,7 @@ router.post(
 );
 
 // @router Post /api/posts/unlike/:id
-// @desc   Like a post
+// @desc   Unlinke a post
 // @acess  Private
 router.post(
   "/unlike/:id",
@@ -181,7 +181,7 @@ router.post(
       post
         .save()
         .then(post => {
-          res.json({ success: true });
+          res.json(post);
         })
         .catch(err => res.status(404).json({ postnotfound: "post not found" }));
     });
