@@ -32,9 +32,9 @@ mongoose
   })
   .catch(err => console.log(err));
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+// app.get("/", (req, res) => {
+//   res.send("hello world");
+// });
 
 //
 
